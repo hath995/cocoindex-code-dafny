@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cocoindex-code-dafny"
+version = "0.1.0"
+description = "Dafny AST-aware chunker for cocoindex-code (ccc)"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+keywords = ["dafny", "cocoindex", "semantic-search", "tree-sitter", "code-search"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Compilers",
+    "Topic :: Text Processing :: Linguistic",
+]
+dependencies = [
+    "tree-sitter>=0.23,<0.24",
+    "tree-sitter-dafny>=0.1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/hath995/cocoindex-code-dafny"
+Issues = "https://github.com/hath995/cocoindex-code-dafny/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
